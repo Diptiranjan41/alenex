@@ -1,0 +1,22 @@
+﻿# Compiled
+*.class
+target/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# App props
+application-production.properties
