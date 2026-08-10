@@ -130,7 +130,7 @@ export default function Contact() {
         subject: `Contact from ${fullName}`,
       };
 
-      const response = await fetch("http://localhost:8080/api/contacts/submit", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contacts/submit`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -167,7 +167,7 @@ export default function Contact() {
     } catch (error) {
       console.error("Error submitting form:", error);
       setIsError(true);
-      setErrorMessage("Network error. Please make sure backend is running on http://localhost:8080");
+      setErrorMessage("Network error. Please make sure the backend is reachable.");
 
       setTimeout(() => {
         setIsError(false);
